@@ -15,7 +15,6 @@ Modelo de referência para banco de dados "blog.sql".
   │   │   ║ user_type ENUM('user', 'author', 'moderator', 'admin') ║
   │   │   ║ user_status ENUM('on', 'off', 'del', 'ban')            ║
   │   │   ╚════════════════════════════════════════════════════════╝
-  │   │   
   │   │   ╔════════════════════════════════════════════════════════╗
   │   │   ║                       articles                         ║
   │   │   ╠════════════════════════════════════════════════════════╣
@@ -29,7 +28,6 @@ Modelo de referência para banco de dados "blog.sql".
   │ │     ║ art_views INT                                          ║
   │ │     ║ art_status ENUM('on', 'off', 'del'                     ║
   │ │     ╚════════════════════════════════════════════════════════╝
-  │ │     
   │ │     ╔════════════════════════════════════════════════════════╗
   │ │     ║                       comments                         ║
   │ │     ╠════════════════════════════════════════════════════════╣
@@ -40,4 +38,18 @@ Modelo de referência para banco de dados "blog.sql".
   └──────█║ cmt_user VARCHAR(255)    (FK → users(user_id))         ║
           ║ cmt_status ENUM('on', 'off', 'del', 'ban')             ║
           ╚════════════════════════════════════════════════════════╝
+          ╔════════════════════════════════════════════════════════╗
+          ║                       contacts                         ║
+          ╠════════════════════════════════════════════════════════╣
+          ║ id INT (PK)                                            ║
+          ║ date TIMESTAMP                                         ║
+          ║ name VARCHAR(255)                                      ║
+          ║ email VARCHAR(255)                                     ║
+          ║ subject VARCHAR(255)                                   ║
+          ║ message TEXT                                           ║
+          ║ status ENUM('received', 'readed', 'responded',         ║
+          ║             'archived', 'deleted')                     ║
+          ╚════════════════════════════════════════════════════════╝
+            
+            
 </pre>
